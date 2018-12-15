@@ -1,7 +1,7 @@
 import twitter
 import Generator
 import subprocess
-import time
+# import time
 
 # get twitter login
 credential_file = open('credentials.txt', 'r')
@@ -37,7 +37,8 @@ while (True):
     try:
         # tweet.PostUpdate(generated_sentence)
         print("\nTweet Tweeted.\n")
-        time.sleep(delay)
+        return
+        # time.sleep(delay)
     except twitter.error.TwitterError as err:
         print(err)
         print("\nTweet Failed, Generating New Tweet\n")
