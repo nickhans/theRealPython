@@ -38,7 +38,6 @@ while (True):
     try:
         tweet.PostUpdate(generated_sentence)
         print("\nTweet Tweeted.\n")
-        return
         time.sleep(delay)
     except twitter.error.TwitterError as err:
         print(err)
