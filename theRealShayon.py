@@ -35,7 +35,7 @@ while (True):
 
     # check if generated sentence has already been tweeted
     try:
-        # tweet.PostUpdate(generated_sentence)
+        tweet.PostUpdate(generated_sentence)
         print("\nTweet Tweeted.\n")
         return
         # time.sleep(delay)
