@@ -1,7 +1,7 @@
 import twitter
 import Generator
 import subprocess
-# import time
+import time
 
 # get twitter login
 credential_file = open('credentials.txt', 'r')
@@ -16,9 +16,10 @@ tweet = twitter.Api(consumer_key=CONSUMER_KEY, consumer_secret=CONSUMER_SECRET,
                     access_token_key=ACCESS_TOKEN, access_token_secret=ACCESS_TOKEN_SECRET)
 
 # get delay time
-delay_input = input("Tweet Delay (mins): ")
+# delay_input = input("Tweet Delay (mins): ")
 print('')
-delay = int(delay_input) * 60
+# delay = int(delay_input) * 60
+delay = 6 * 60
 # print(delay)
 
 g = Generator.Generator()
@@ -38,7 +39,7 @@ while (True):
         tweet.PostUpdate(generated_sentence)
         print("\nTweet Tweeted.\n")
         return
-        # time.sleep(delay)
+        time.sleep(delay)
     except twitter.error.TwitterError as err:
         print(err)
         print("\nTweet Failed, Generating New Tweet\n")
